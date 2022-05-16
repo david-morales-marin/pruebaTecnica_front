@@ -1,0 +1,26 @@
+<div class="formularioUsuario">
+  <h1>Registrar Usuario</h1>
+  <form [formGroup]="usuarioForm" (ngSubmit)="guardar()">
+    <div class="form-group">
+      <label>Identificacion</label>
+      <select name="Identificacion" id="Identificacion" formControlName="Identificacion" class="form-control"> 
+        <option value="item.identificacion" *ngFor="let item of identificacion">{{item.identificacion}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>telefono</label>
+      <input type="text" formControlName="telefono" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>nombre</label>
+      <input type="text" formControlName="nombre" class="form-control">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    
+  </form>
+</div>
+
+
+
+<router-outlet></router-outlet>
